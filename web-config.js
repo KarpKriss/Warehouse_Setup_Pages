@@ -1,0 +1,1 @@
+globalThis.WarehouseWebConfig={"url": "https://pnzqmnvkdqlfdnvdesic.supabase.co", "publishableKey": "sb_publishable_Unq_Qk8rS8FhmFZYP2s-ag_UVzVFOCA", "rawSha256": "541b1d45fa3156cc818d52805958b2398214d001482de268fda2eecf95f24dc5", "gzipSha256": "39bd19305b08a284e16205722f0373ae57d28d5328377c5e952b13929520f6dc", "gzipSize": 2856674};

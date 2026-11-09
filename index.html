@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://pnzqmnvkdqlfdnvdesic.supabase.co; object-src 'none'; base-uri 'none'">
+<link rel="icon" href="data:,"><title>Warehouse Setup</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="web.css"></head>
+<body><header class="corporate-header"><strong>Warehouse Setup</strong><div class="corporate-context"><span id="header-status">Dostęp zespołu</span><button id="logout" class="button secondary" hidden>Wyloguj</button></div></header>
+<section id="login"><h1>Warehouse Setup</h1><form id="login-form"><label>E-mail<input name="email" type="email" autocomplete="username" required></label><label>Hasło<input name="password" type="password" autocomplete="current-password" required></label><button class="button primary" type="submit">Zaloguj</button></form><p id="login-status" role="status" aria-live="polite"></p><section id="bootstrap" hidden><p>Wczytaj plik private/warehouse-base.json.gz z projektu, aby udostępnić mapę zalogowanym członkom zespołu.</p><input id="bootstrap-file" type="file" accept=".gz"></section></section><div hidden id="controlroom" class="shell warehouse-mode"><main><section id="view" class="page active"><div id="web-status" role="status">Zmiany są zapisywane w tej przeglądarce. Gotowy układ przekaż przez Eksport Warehouse Setup.</div><div class="view-layout"><div id="warehouse-map"></div><details class="panel inspector"><summary>Inspektor</summary><div id="inspector">Wybierz obiekt na mapie.</div></details></div></section></main></div>
+<script src="modules/shipdock-domain.js"></script>
+<script src="modules/core.js"></script>
+<script src="modules/planning-rules.js"></script>
+<script src="modules/layout-objects.js"></script>
+<script src="modules/layout-edit.js"></script>
+<script src="modules/spatial-engine.js"></script>
+<script src="modules/gate-schedule.js"></script>
+<script src="modules/algorithm-settings.js"></script>
+<script src="modules/operations-schema.js"></script>
+<script src="modules/line-sketch.js"></script>
+<script src="modules/sketch-access.js"></script>
+<script src="modules/warehouse-backup.js"></script>
+<script src="modules/editor-lease.js"></script>
+<script src="modules/warehouse-test.js"></script>
+<script src="modules/ribbon-icons.js"></script>
+<script src="modules/warehouse-ribbon.js"></script>
+<script src="modules/object-inspector.js"></script>
+<script src="modules/layout-editor-view.js"></script>
+<script src="modules/map-measure.js"></script>
+<script src="modules/spatial-view.js"></script>
+<script src="modules/shipdock-optimizer.js"></script>
+<script src="web-config.js"></script><script src="auth-session.js"></script><script src="web.js"></script></body></html>

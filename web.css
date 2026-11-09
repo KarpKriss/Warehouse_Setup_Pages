@@ -1,0 +1,10 @@
+#controlroom.shell {display:block;grid-template-columns:1fr;}
+#controlroom>main {width:100%;min-width:0;}
+#web-status {padding:8px 16px;font-size:14px;}
+.corporate-header {padding:12px 20px;}
+
+[hidden] {display:none!important;}
+#login {max-width:460px;margin:48px auto;padding:24px;}
+#login-form {display:grid;gap:16px;margin:24px 0;}
+#login-form label {display:grid;gap:6px;}
+#login-form input {padding:12px;font:inherit;}
