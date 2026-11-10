@@ -8,3 +8,5 @@
 #login-form {display:grid;gap:16px;margin:24px 0;}
 #login-form label {display:grid;gap:6px;}
 #login-form input {padding:12px;font:inherit;}
+
+#team-panel {max-width:1100px;margin:24px auto;padding:24px;} .team-heading {display:flex;align-items:center;justify-content:space-between;gap:16px;} #team-panel h2 {margin-top:24px;} #team-status {min-height:24px;} .team-table {overflow:auto;margin:16px 0;} .team-table table {width:100%;border-collapse:collapse;} .team-table th,.team-table td {padding:12px;text-align:left;border-bottom:1px solid #d7dfe8;} #team-invite {display:flex;flex-wrap:wrap;gap:16px;align-items:end;} #team-invite label,#invite-result label,#activation-form label {display:grid;gap:6px;} #team-invite input,#team-invite select,#invite-link,#activation-form input {font:inherit;padding:10px;} #invite-result {margin-top:20px;} #invite-link {width:100%;} #activation-form {display:grid;gap:14px;margin:20px 0;} @media(max-width:600px){.team-heading{align-items:start;flex-direction:column;} #team-panel{padding:14px;}}

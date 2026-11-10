@@ -21,11 +21,12 @@
     heartbeat=setInterval(async()=>{try{const member=await(await auth.call('me')).json();if(member.userId!==auth.member?.userId||member.role!==auth.member.role)throw Error('ACCESS_DENIED');}catch{app.hidden=true;clearInterval(heartbeat);await auth.logout();location.reload();}},60000);
   }
   form.onsubmit=async e=>{e.preventDefault();const button=form.querySelector('button');button.disabled=true;status.textContent='Logowanie…';
-    try{await auth.login(form.email.value,form.password.value);form.password.value='';status.textContent='Pobieranie mapy…';await loadMap();}
+    try{await auth.login(form.email.value,form.password.value);DG.mountTeamPanel(auth);form.password.value='';status.textContent='Pobieranie mapy…';await loadMap();}
     catch(error){status.textContent=errorMessage(error);if(error.message==='SOURCE_NOT_READY'&&auth.member?.role==='admin')document.getElementById('bootstrap').hidden=false;else{await auth.logout();document.getElementById('bootstrap').hidden=true;}}
     finally{button.disabled=false;}
   };
   document.getElementById('bootstrap-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;const input=e.target;input.disabled=true;status.textContent='Wczytywanie bazowej mapy…';try{await auth.call('bootstrap',{method:'POST',headers:{'Content-Type':'application/gzip'},body:await file.arrayBuffer()});await loadMap();}catch(error){status.textContent=errorMessage(error);}finally{input.disabled=false;input.value='';}};
+  DG.setupActivation(auth);
   document.getElementById('logout').onclick=async()=>{app.hidden=true;clearInterval(heartbeat);await auth.logout();location.reload();};
   window.addEventListener('pagehide',()=>clearInterval(heartbeat));
 })();
